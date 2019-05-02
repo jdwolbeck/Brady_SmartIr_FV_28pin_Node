@@ -84,7 +84,6 @@ void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void) {
 void __attribute__((interrupt, no_auto_psv)) _U1RXInterrupt( void )
 {
     appData.U1RxByte = U1RXREG;
-    
     if(appData.U1RxByte != '\0')
     {
         if(bleData.packetIndex == (PACKET_LEN - 1))
