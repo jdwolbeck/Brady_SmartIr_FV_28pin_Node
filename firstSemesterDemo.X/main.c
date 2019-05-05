@@ -24,7 +24,7 @@ int main() {
     application_init();
     while (1) 
     {     
-        ms_delay(10);
+        //ms_delay(100);
         //getConversions();
         node_application();        
     }
