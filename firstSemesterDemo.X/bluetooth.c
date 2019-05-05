@@ -56,7 +56,7 @@ void node_application(void)
             command_byte = SEND_DATA;
             memset(bleData.packetBuf,'\0',PACKET_LEN);
             bleData.packetIndex = 0;
-            LED_JOSH = 1;
+            LED_JOSH = !LED_JOSH;
         }
         if(BLE_searchStr("SEND_DATA,1", bleData.packetBuf))
         {//Enter when previous nodes wants next nodes data
